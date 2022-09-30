@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update user</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wapper container">
+        <form method="post" action="/update-info-user" >
+            <input type="text" hidden="true" name="id" value="<%=dataUser.id %>">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" value="<%=dataUser.name %> ">
+            </div>
+            <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control" name="email" value="<%=dataUser.email %> ">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" value="<%=dataUser.password %> ">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
